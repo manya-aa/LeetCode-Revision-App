@@ -1,7 +1,6 @@
 package backend.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
@@ -9,7 +8,8 @@ import java.time.LocalDate;
 public class ProblemEntity {
 
     @Id
-    public  int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     public int getUser_id() {
         return user_id;
@@ -51,9 +51,11 @@ public class ProblemEntity {
         this.date = date;
     }
 
-    public int user_id;
-    public  int prob_num;
-public String url;
-public int interval;
-public LocalDate date;
+    private int user_id;
+    private int prob_num;
+    private String url;
+    private int interval;
+    private LocalDate date;
+
+    public ProblemEntity() {}
 }

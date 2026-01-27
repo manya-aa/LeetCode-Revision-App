@@ -2,20 +2,39 @@ package backend.controller;
 
 import backend.dto.ProblemDTO;
 import backend.service.ProblemService;
+import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDate;
+import java.util.List;
 
 @RestController
 public class ProblemController {
 
-    @Autowired
     ProblemService problemService;
 
-    @PostMapping("/addProb")
-    public void addProb(ProblemDTO problem){
-problemService.addProb(problem);
+    @Autowired
+    public ProblemController(ProblemService problemService) {
+        this.problemService = problemService;
     }
+
+    @PostMapping("/addProb")
+    public ResponseEntity<ProblemDTO> addProb(@RequestBody ProblemDTO problem){
+      return ResponseEntity.ok(problemService.addProb(problem));
+    }
+
+    @GetMapping("/showProb")
+    public ResponseEntity<List<ProblemDTO>> showProb(){
+        return ResponseEntity.ok(problemService.showProb());
+    }
+
+    @PostMapping("/submit")
+    public ResponseEntity<Void> submit(@RequestBody List<Integer> problem){
+     problemService.submit(problem);
+        return ResponseEntity.ok().build();
+    }
+
 
 }

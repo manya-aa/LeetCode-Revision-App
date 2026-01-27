@@ -2,11 +2,13 @@ package backend.repository;
 
 import backend.dto.ProblemDTO;
 import backend.entity.ProblemEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public class ProblemRepository {
+import java.time.LocalDate;
+import java.util.List;
 
-    public void addProb(ProblemEntity problem){
-
-    }
-
+@Repository
+public interface ProblemRepository extends JpaRepository<ProblemEntity,Integer> {
+    public List<ProblemEntity> findAllBydate(LocalDate date);
 }

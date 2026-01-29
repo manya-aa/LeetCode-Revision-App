@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Problem | CodeRecall</title>
+    <link rel="stylesheet" href="../styles/add-problem.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Add Problem</h1>
+    <p class="subtitle">Log it once. Revisit forever.</p>
+
+    <form class="problem-form">
+        <label>
+            Problem Number
+            <input id="probNo" type="number" placeholder="e.g. 217" required>
+        </label>
+        <label>
+            Problem Name
+            <input id="probName" type="text" placeholder="Two sum" required>
+        </label>
+        <label>
+            Problem URL
+            <input id="probUrl" type="url" placeholder="https://leetcode.com/problems/..." required>
+        </label>
+
+        <button id="addProbBtn" type="submit" class="btn primary clickable">
+            Save Problem
+        </button>
+    </form>
+
+    <a href="index.html">  <button class="btn secondary clickable back-btn">
+        ← Back
+    </button></a>
+</div>
+
+<!--<img src="../assets/pixel-cube.png" class="pixel top-left">-->
+<!--<img src="../assets/pixel-star.png" class="pixel bottom-right">-->
+<script type="module" src="../js/addProb.js"></script>
+<script src="../js/sound.js"></script>
+
+</body>
+</html>

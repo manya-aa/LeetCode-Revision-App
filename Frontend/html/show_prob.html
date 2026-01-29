@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Today | CodeRecall</title>
+    <link rel="stylesheet" href="../styles/today.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Today's Problems</h1>
+    <p class="subtitle">Check what you revised</p>
+
+    <form id="revisionForm">
+        <ul class="problem-list" id="problemList">
+            <!-- populated by JS -->
+        </ul>
+
+        <button type="submit" id="submitBtn" class="btn primary clickable">
+            Submit Revision
+        </button>
+    </form>
+
+  <a href="index.html">  <button class="btn secondary clickable back-btn" onclick="history.back()">
+        ← Back
+    </button></a>
+</div>
+
+<script src="../js/sound.js"></script>
+<script type="module" src="../js/today.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url("../assets/normal.png") 0 0, auto;
+}
+html {
+  image-rendering: pixelated;
+}
+
+body {
+    height: 100vh;
+    background-color: #0f0f0f;
+    background-image: radial-gradient(#2a2a2a 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #eaeaea;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    border: 3px solid #eaeaea;
+    background-color: #111;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    font-size: 10px;
+    margin-bottom: 32px;
+    color: #bdbdbd;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 14px 20px;
+    font-family: inherit;
+    font-size: 10px;
+    border: 3px solid #eaeaea;
+    background: transparent;
+    color: #eaeaea;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+#primary {
+    border-color: #00ff9c;
+    color: #00ff9c;
+}
+
+#primary:hover {
+    background-color: #00ff9c;
+    color: #0f0f0f;
+}
+
+#secondary {
+    border-color: #ff5c5c;
+    color: #ff5c5c;
+}
+
+#secondary:hover {
+    background-color: #ff5c5c;
+    color: #0f0f0f;
+}
+a, button, input, textarea {
+  cursor: url("../assets/hover.png") 0 0, auto;
+}
+.pixel {
+    position: absolute;
+    image-rendering: pixelated;
+    width: 32px;
+    height: 32px;
+}
+
+.top-left { top: 40px; left: 40px; }
+.top-right { top: 40px; right: 40px; }
+.bottom-left { bottom: 40px; left: 40px; }
+.bottom-right { bottom: 40px; right: 40px; }
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}

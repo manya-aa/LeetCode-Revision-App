@@ -1,5 +1,4 @@
 package backend.controller;
-
 import backend.dto.ProblemDTO;
 import backend.service.ProblemService;
 import org.apache.catalina.connector.Response;
@@ -9,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
-
 @RestController
+@CrossOrigin(origins = "http://localhost:63342")
 public class ProblemController {
 
-    ProblemService problemService;
+    private final ProblemService problemService;
 
     @Autowired
     public ProblemController(ProblemService problemService) {
@@ -21,20 +20,18 @@ public class ProblemController {
     }
 
     @PostMapping("/addProb")
-    public ResponseEntity<ProblemDTO> addProb(@RequestBody ProblemDTO problem){
-      return ResponseEntity.ok(problemService.addProb(problem));
+    public ResponseEntity<ProblemDTO> addProb(@RequestBody ProblemDTO problem) {
+        return ResponseEntity.ok(problemService.addProb(problem));
     }
 
     @GetMapping("/showProb")
-    public ResponseEntity<List<ProblemDTO>> showProb(){
+    public ResponseEntity<List<ProblemDTO>> showProb() {
         return ResponseEntity.ok(problemService.showProb());
     }
 
     @PostMapping("/submit")
-    public ResponseEntity<Void> submit(@RequestBody List<Integer> problem){
-     problemService.submit(problem);
+    public ResponseEntity<Void> submit(@RequestBody List<Integer> problemIds) {
+        problemService.submit(problemIds);
         return ResponseEntity.ok().build();
     }
-
-
 }

@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     cursor: url("../assets/normal.png") 0 0, auto;
+}
+
+body {
+    height: 100vh;
+    background-color: #0f0f0f;
+    background-image: radial-gradient(#2a2a2a 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #eaeaea;
+}
+
+.container {
+    width: 420px;
+    padding: 40px;
+    border: 3px solid #eaeaea;
+    background-color: #111;
+    text-align: center;
+    position: relative;
+}
+
+.title {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 9px;
+    margin-bottom: 30px;
+    color: #bdbdbd;
+}
+
+.problem-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+label {
+    font-size: 9px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+input {
+    padding: 10px;
+    font-family: inherit;
+    font-size: 9px;
+    background: #0f0f0f;
+    border: 2px solid #eaeaea;
+    color: #eaeaea;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00ff9c;
+}
+
+.btn {
+    padding: 12px;
+    font-family: inherit;
+    font-size: 9px;
+    border: 3px solid #eaeaea;
+    background: transparent;
+    color: #eaeaea;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.primary {
+    border-color: #00ff9c;
+    color: #00ff9c;
+}
+
+.primary:hover {
+    background-color: #00ff9c;
+    color: #0f0f0f;
+}
+
+.secondary {
+    border-color: #ff5c5c;
+    color: #ff5c5c;
+}
+
+.secondary:hover {
+    background-color: #ff5c5c;
+    color: #0f0f0f;
+}
+
+.back-btn {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.pixel {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+}
+
+.top-left {
+    top: -16px;
+    left: -16px;
+}
+
+.bottom-right {
+    bottom: -16px;
+    right: -16px;
+}
+a, button, input, textarea {
+  cursor: url("../assets/hover.png") 0 0, auto;
+}

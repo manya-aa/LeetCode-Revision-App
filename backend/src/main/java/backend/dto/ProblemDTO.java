@@ -2,9 +2,17 @@ package backend.dto;
 
 public class ProblemDTO {
 
-
 private int prob_no;
 private String url;
+private String prob_name;
+
+    public String getProb_name() {
+        return prob_name;
+    }
+
+    public void setProb_name(String prob_name) {
+        this.prob_name = prob_name;
+    }
 
     public int getProb_no() {
         return prob_no;

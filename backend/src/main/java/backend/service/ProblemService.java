@@ -35,6 +35,7 @@ public class ProblemService {
         problemEntity.setProb_num(problem.getProb_no());
         problemEntity.setUrl(problem.getUrl());
         problemEntity.setInterval(5);
+        problemEntity.setProb_name(problem.getProb_name());
         return problemEntity;
     }
 
@@ -42,6 +43,7 @@ public class ProblemService {
         ProblemDTO problemDTO = new ProblemDTO();
         problemDTO.setProb_no(problem.getProb_num());
         problemDTO.setUrl(problem.getUrl());
+        problemDTO.setProb_name(problem.getProb_name());
         return problemDTO;
     }
 

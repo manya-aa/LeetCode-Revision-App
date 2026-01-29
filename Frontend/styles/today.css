@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url("../assets/normal.png") 0 0, auto;
+}
+
+body {
+    height: 100vh;
+    background-color: #0f0f0f;
+    background-image: radial-gradient(#2a2a2a 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #eaeaea;
+}
+
+.container {
+    width: 480px;
+    padding: 36px;
+    border: 3px solid #eaeaea;
+    background-color: #111;
+    text-align: center;
+}
+
+.title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 9px;
+    margin-bottom: 24px;
+    color: #bdbdbd;
+}
+
+.problem-list {
+    list-style: none;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+}
+
+.problem-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 9px;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #00ff9c;
+
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 9px;
+
+    border: 3px solid #eaeaea;
+    background: transparent;
+    color: #eaeaea;
+    transition: all 0.15s ease-in-out;
+}
+
+.primary {
+    border-color: #00ff9c;
+    color: #00ff9c;
+}
+
+.primary:hover {
+    background-color: #00ff9c;
+    color: #0f0f0f;
+}
+
+.secondary {
+    margin-top: 12px;
+    border-color: #ff5c5c;
+    color: #ff5c5c;
+}
+
+.secondary:hover {
+    background-color: #ff5c5c;
+    color: #0f0f0f;
+}
+a, button, input, textarea {
+  cursor: url("../assets/hover.png") 0 0, auto;
+}

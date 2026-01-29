@@ -56,6 +56,14 @@ public class ProblemEntity {
     private String url;
     private int interval;
     private LocalDate date;
-
+private String prob_name;
     public ProblemEntity() {}
+
+    public String getProb_name() {
+        return prob_name;
+    }
+
+    public void setProb_name(String prob_name) {
+        this.prob_name = prob_name;
+    }
 }
